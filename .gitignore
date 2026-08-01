@@ -1,0 +1,13 @@
+# Generated at runtime — don't commit
+security_log.txt
+ 
+# Python cache
+__pycache__/
+*.pyc
+ 
+# If you ever add a .env for API keys later
+.env
+ 
+# Editor/OS clutter
+.vscode/
+.DS_Store

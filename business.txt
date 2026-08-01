@@ -1,0 +1,41 @@
+Business Overview: SecureNet IT Solutions
+ 
+SecureNet IT Solutions was founded in 2019 by CEO Jimmy Bob to provide
+IT support and cybersecurity consulting services to small and mid-sized
+businesses.
+ 
+Location
+--------
+The company's headquarters are located in downtown Austin, Texas.
+ 
+Team
+----
+SecureNet currently has about 45 employees across support, engineering,
+and consulting roles.
+ 
+Services
+--------
+The company offers IT support, network security audits, and cybersecurity
+consulting for small and mid-sized businesses. Clients are primarily
+located in the greater Austin area.
+ 
+Business Hours
+---------------
+Monday through Friday, 8 AM to 6 PM.
+ 
+Contact
+-------
+General inquiries can be sent to contact@example-business.com.
+ 
+IT Infrastructure
+------------------
+The business runs its internal infrastructure on Linux servers. All
+employees are required to authenticate using Active Directory before
+accessing internal systems. The network is protected by a managed
+firewall, and remote employees are required to connect through a VPN.
+ 
+Data Protection
+----------------
+The company maintains nightly automated backups with offsite disaster
+recovery in case of hardware failure or data loss.
+ 

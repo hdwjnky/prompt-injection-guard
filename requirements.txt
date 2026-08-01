@@ -1,0 +1,6 @@
+# Required for running the test suite:
+pytest
+
+# Optional — only needed if you later want to try --live mode with a real
+# Claude API key. Not required for the offline demo.
+# anthropic
