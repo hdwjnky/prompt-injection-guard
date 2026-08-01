@@ -49,9 +49,8 @@ production LLM pipeline.
 
 ## Demo
 
-<!-- <img width="1231" height="1055" alt="sample run" src="https://github.com/user-attachments/assets/26ae4d7d-4338-4b57-bd7b-db3cc5c23836" />
+<img width="1231" height="1055" alt="sample run" src="https://github.com/user-attachments/assets/26ae4d7d-4338-4b57-bd7b-db3cc5c23836" />
 <img width="735" height="1240" alt="sample code" src="https://github.com/user-attachments/assets/9660cc90-f30b-4c8c-9b0d-331575f1e598" />
--->
 
 ## Results
 
