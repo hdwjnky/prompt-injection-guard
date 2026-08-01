@@ -4,6 +4,22 @@ A small defensive-security demo: a rule-based screening layer that sits
 between a user and an LLM, designed to catch common prompt injection
 attempts and sensitive-data fishing before they reach the model.
 
+## Why I built this
+
+I built this project to understand prompt injection from the defender's
+side, not just as a concept I'd read about. As a cybersecurity student, I
+wanted a hands-on way to explore how an LLM-integrated system could be
+attacked, through instruction overrides, jailbreak framing, and attempts
+to extract sensitive data, and to actually build a layer that catches
+those attempts before they reach the model.
+
+The scoring system came out of a real design question. A keyword
+blocklist alone either misses paraphrased attacks or false-positives on
+completely normal phrases like "act as a helpful assistant." Making risk
+cumulative, where several weak signals stack into a real alert but one
+weak signal alone doesn't, felt closer to how real detection systems have
+to balance precision and recall.
+
 ## Why this exists
 
 If you let raw user input hit an LLM unfiltered, a user can try phrasing
@@ -31,6 +47,24 @@ production LLM pipeline.
 - **Structured, timestamped logging** — every flagged event is logged with
   a timestamp, risk level, score, and every individual pattern that fired.
 
+## Demo
+
+<img width="735" height="1240" alt="sample code" src="https://github.com/user-attachments/assets/f7552d16-3cef-4a2f-9ac2-24c6ffa22dfa" />
+<img width="1231" height="1055" alt="sample run" src="https://github.com/user-attachments/assets/a4fb113e-d609-476e-9c9d-a3d1db9e8e2b" />
+
+
+## Getting Started
+
+```bash
+git clone https://github.com/hdwjnky/prompt-injection-guard.git
+cd prompt-injection-guard
+pip install -r requirements.txt
+python prompt_injection_guard.py
+```
+
+`business.txt` is already included in this repo, so it runs immediately
+with no extra setup.
+
 ## Usage
 
 ```bash
@@ -38,18 +72,30 @@ production LLM pipeline.
 python prompt_injection_guard.py
 
 # Live mode — sends sanitized questions to the real Claude API
-pip install anthropic
+# (requires uncommenting 'anthropic' in requirements.txt and reinstalling)
 export ANTHROPIC_API_KEY=sk-ant-...
 python prompt_injection_guard.py --live
 ```
 
-Place a `business.txt` file in the same folder — its contents are used as
-the context document for answering questions.
+## Reporting
+
+Every flagged attempt is logged to `security_log.txt`. Generate a summary
+report from that log at any time:
+
+```bash
+python generate_report.py
+
+# or export to CSV for a spreadsheet
+python generate_report.py --csv report.csv
+```
+
+This prints a breakdown of flagged events by type, risk level, and
+detection category, plus the 5 most recent events.
 
 ## Tests
 
 ```bash
-pip install pytest
+pip install -r requirements.txt
 pytest test_prompt_injection_guard.py -v
 ```
 
