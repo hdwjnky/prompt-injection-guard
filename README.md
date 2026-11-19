@@ -49,9 +49,9 @@ production LLM pipeline.
 
 ## Demo
 
-<img width="703" height="547" alt="Sample" src="https://github.com/user-attachments/assets/9cf067fc-8128-49c9-a746-fe213879b89f" />
+<img width="703" height="547" alt="Demo run showing pass, sanitize, and block results" src="https://github.com/user-attachments/assets/9cf067fc-8128-49c9-a746-fe213879b89f" />
 
-<img width="735" height="1240" alt="sample code" src="https://github.com/user-attachments/assets/9660cc90-f30b-4c8c-9b0d-331575f1e598" />
+<img width="735" height="1240" alt="Sample Code" src="https://github.com/user-attachments/assets/9660cc90-f30b-4c8c-9b0d-331575f1e598" />
 
 ## Results
 
@@ -108,7 +108,7 @@ python generate_report.py --csv report.csv
 This prints a breakdown of flagged events by type, risk level, and
 detection category, plus the 5 most recent events.
 
-<img width="874" height="448" alt="image" src="https://github.com/user-attachments/assets/6058ccea-1e28-44d2-804e-71bd810372ee" />
+<img width="874" height="448" alt="Security log report output" src="https://github.com/user-attachments/assets/6058ccea-1e28-44d2-804e-71bd810372ee" />
 
 ## Tests
 
